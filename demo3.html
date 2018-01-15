@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垂直居中</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            margin:20px;
+            width:400px;
+            padding:10px;
+            height:100px;
+            background-color:#8ec63f;
+            display:table-cell;
+            text-align:center;
+            vertical-align: middle;
+
+        }
+        .input-text{
+            height:25px;
+        }
+        .btn{
+            height:25px;
+            vertical-align: middle;
+        }
+        .div1{
+            width:50px;
+            height:60px;
+            background-color: blue;
+            display:inline-block;
+            vertical-align: middle;
+        }
+        img{
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="div1">div</div>
+    <input type="text" class="input-text"/>
+    <button type="button" class="btn">发送</button>
+    <img src="a.png"/>
+</div>
+</body>
+</html>
