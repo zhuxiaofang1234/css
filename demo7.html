@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex布局教程</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .box{
+            width:108px;
+            height:108px;
+            background-color: #eee;
+            border-radius:4px;
+            margin-top:20px;
+        }
+        .item{
+            width:20px;
+            height:20px;
+            display: block;
+            border-radius:50%;
+            background-color: black;
+        }
+        .first-face{
+            display:flex;
+        }
+
+        .second-face{
+            display:flex;
+            justify-content:space-between;  /*两端对齐，项目之间的间隔都相等*/
+        }
+
+        .second-face .item:nth-of-type(2){
+            align-self: flex-end;
+        }
+
+        .third-face{
+            display:flex;
+            justify-content: space-between;
+        }
+        .third-face .item:nth-of-type(2){
+            align-self:center;
+        }
+
+        .third-face .item:nth-of-type(3){
+            align-self:flex-end;
+        }
+        .fourth-face{
+            display:flex;
+            flex-wrap:wrap; /*换行*/
+            align-content: space-between;
+        }
+
+        .fourth-face .column {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fifth-face{
+            display:flex;
+            justify-content:space-between;
+        }
+        .fifth-face .column{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+        }
+        .fifth-face .column:nth-of-type(2){
+            justify-content:center;
+        }
+
+        .sixth-face{
+            display:flex;
+            justify-content:space-between;
+        }
+        .sixth-face .column{
+            display:flex;
+            justify-content:space-between;
+            flex-direction:column;
+        }
+
+    </style>
+</head>
+<body>
+<div class="first-face box">
+    <span class="item"></span>
+</div>
+<div class="second-face box">
+    <span class="item"></span>
+    <span class="item"></span>
+</div>
+<div class="third-face box">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+</div>
+<div class="fourth-face box">
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</div>
+<div class="fifth-face box">
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="column">
+        <span class="item"></span>
+    </div>
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</div>
+<div class="sixth-face box">
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+    <div class="column">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</div>
+</body>
+</html>
